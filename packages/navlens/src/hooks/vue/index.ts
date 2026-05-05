@@ -1,0 +1,1 @@
+export { useVueNavigationHistory } from './useNavigationHistory'

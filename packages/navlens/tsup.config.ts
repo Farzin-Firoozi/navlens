@@ -1,0 +1,35 @@
+import { defineConfig } from 'tsup'
+
+export default defineConfig({
+  entry: {
+    'index': 'src/index.ts',
+    'core/helpers': 'src/core/helpers.ts',
+    'hooks/react/index': 'src/hooks/react/index.ts',
+    'components/react/index': 'src/components/react/index.ts',
+    'adapters/next': 'src/adapters/next.ts',
+    'adapters/react-router': 'src/adapters/react-router.ts',
+    'adapters/vue-router': 'src/adapters/vue-router.ts',
+    'adapters/nuxt': 'src/adapters/nuxt.ts',
+    'adapters/quasar': 'src/adapters/quasar.ts',
+    'adapters/generic': 'src/adapters/generic.ts',
+    'hooks/vue/index': 'src/hooks/vue/index.ts',
+    'components/vue/index': 'src/components/vue/index.ts',
+    'hooks/svelte/index': 'src/hooks/svelte/index.ts',
+  },
+  format: ['esm', 'cjs'],
+  dts: true,
+  splitting: false,
+  sourcemap: true,
+  clean: true,
+  external: [
+    'react',
+    'react/jsx-runtime',
+    'react-dom',
+    'next/navigation',
+    'react-router-dom',
+    'vue',
+    'vue-router',
+    'svelte',
+    '$app/navigation',
+  ],
+})

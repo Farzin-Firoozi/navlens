@@ -1,0 +1,8 @@
+{
+  "name": "navlens-monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ]
+}

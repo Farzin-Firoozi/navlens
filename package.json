@@ -1,5 +1,7 @@
 {
   "name": "navlens-monorepo",
+  "license": "MIT",
+  "author": "Farzin Firoozi",
   "private": true,
   "workspaces": [
     "packages/*",

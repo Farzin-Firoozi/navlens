@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "navlens": "*"
+    "navlens": "workspace:*"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^3.0.0",

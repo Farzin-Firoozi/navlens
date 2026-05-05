@@ -8,7 +8,7 @@
     "preview": "nuxt preview"
   },
   "dependencies": {
-    "navlens": "*",
+    "navlens": "workspace:*",
     "nuxt": "^3.0.0"
   },
   "devDependencies": {

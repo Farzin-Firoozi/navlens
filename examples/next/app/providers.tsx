@@ -1,12 +1,14 @@
-'use client'
+"use client";
 
-import { ReactNavigationTracker } from 'navlens'
+import { ReactNavigationTracker, useNextAdapter } from "navlens";
 
 export function Providers({ children }: { children: React.ReactNode }) {
+  const adapter = useNextAdapter();
+
   return (
     <>
-      <ReactNavigationTracker adapter="next" />
+      <ReactNavigationTracker adapter={adapter} />
       {children}
     </>
-  )
+  );
 }

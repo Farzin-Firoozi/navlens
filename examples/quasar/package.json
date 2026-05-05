@@ -1,0 +1,20 @@
+{
+  "name": "navlens-example-quasar",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "quasar dev",
+    "build": "quasar build"
+  },
+  "dependencies": {
+    "navlens": "*",
+    "quasar": "^2.0.0",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0"
+  },
+  "devDependencies": {
+    "@quasar/app-vite": "^1.0.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}

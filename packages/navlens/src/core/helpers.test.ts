@@ -2,12 +2,14 @@ import { describe, it, expect, beforeEach } from 'vitest'
 import { getNavHistory, getPreviousPath, getCurrentPath, clearNavHistory } from './helpers'
 import { writeHistory } from './storage'
 
+const KEY = 'navlens_history'
 const now = Date.now()
 
+// oldest first, newest last
 const mockHistory = [
-  { path: '/products/1', timestamp: now },
-  { path: '/products', timestamp: now - 1000 },
   { path: '/', timestamp: now - 2000 },
+  { path: '/products', timestamp: now - 1000 },
+  { path: '/products/1', timestamp: now },
 ]
 
 beforeEach(() => {
@@ -30,7 +32,7 @@ describe('getCurrentPath', () => {
     expect(getCurrentPath()).toBeUndefined()
   })
 
-  it('returns first entry path', () => {
+  it('returns last entry path (newest)', () => {
     writeHistory(mockHistory)
     expect(getCurrentPath()).toBe('/products/1')
   })
@@ -46,14 +48,14 @@ describe('getPreviousPath', () => {
     expect(getPreviousPath()).toBeUndefined()
   })
 
-  it('returns second entry path', () => {
+  it('returns second-to-last entry path', () => {
     writeHistory(mockHistory)
     expect(getPreviousPath()).toBe('/products')
   })
 })
 
 describe('clearNavHistory', () => {
-  it('removes history from storage', () => {
+  it('clears history (writes empty array)', () => {
     writeHistory(mockHistory)
     clearNavHistory()
     expect(getNavHistory()).toEqual([])
@@ -62,6 +64,7 @@ describe('clearNavHistory', () => {
   it('respects custom storageKey', () => {
     sessionStorage.setItem('custom_key', JSON.stringify(mockHistory))
     clearNavHistory({ storageKey: 'custom_key' })
-    expect(sessionStorage.getItem('custom_key')).toBeNull()
+    const stored = sessionStorage.getItem('custom_key')
+    expect(stored).toBe('[]')
   })
 })

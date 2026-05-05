@@ -5,64 +5,69 @@
   "type": "module",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
-      "require": "./dist/index.cjs",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.cjs"
     },
     "./core": {
+      "types": "./dist/core/helpers.d.ts",
       "import": "./dist/core/helpers.js",
-      "require": "./dist/core/helpers.cjs",
-      "types": "./dist/core/helpers.d.ts"
+      "require": "./dist/core/helpers.cjs"
     },
     "./react": {
+      "types": "./dist/hooks/react/index.d.ts",
       "import": "./dist/hooks/react/index.js",
-      "require": "./dist/hooks/react/index.cjs",
-      "types": "./dist/hooks/react/index.d.ts"
+      "require": "./dist/hooks/react/index.cjs"
     },
     "./react/components": {
+      "types": "./dist/components/react/index.d.ts",
       "import": "./dist/components/react/index.js",
-      "require": "./dist/components/react/index.cjs",
-      "types": "./dist/components/react/index.d.ts"
+      "require": "./dist/components/react/index.cjs"
     },
     "./next": {
+      "types": "./dist/adapters/next.d.ts",
       "import": "./dist/adapters/next.js",
-      "require": "./dist/adapters/next.cjs",
-      "types": "./dist/adapters/next.d.ts"
+      "require": "./dist/adapters/next.cjs"
     },
     "./react-router": {
+      "types": "./dist/adapters/react-router.d.ts",
       "import": "./dist/adapters/react-router.js",
-      "require": "./dist/adapters/react-router.cjs",
-      "types": "./dist/adapters/react-router.d.ts"
+      "require": "./dist/adapters/react-router.cjs"
     },
     "./vue": {
+      "types": "./dist/hooks/vue/index.d.ts",
       "import": "./dist/hooks/vue/index.js",
-      "require": "./dist/hooks/vue/index.cjs",
-      "types": "./dist/hooks/vue/index.d.ts"
+      "require": "./dist/hooks/vue/index.cjs"
     },
     "./vue/components": {
+      "types": "./dist/components/vue/index.d.ts",
       "import": "./dist/components/vue/index.js",
-      "require": "./dist/components/vue/index.cjs",
-      "types": "./dist/components/vue/index.d.ts"
+      "require": "./dist/components/vue/index.cjs"
     },
     "./vue-router": {
+      "types": "./dist/adapters/vue-router.d.ts",
       "import": "./dist/adapters/vue-router.js",
-      "require": "./dist/adapters/vue-router.cjs",
-      "types": "./dist/adapters/vue-router.d.ts"
+      "require": "./dist/adapters/vue-router.cjs"
     },
     "./nuxt": {
+      "types": "./dist/adapters/nuxt.d.ts",
       "import": "./dist/adapters/nuxt.js",
-      "require": "./dist/adapters/nuxt.cjs",
-      "types": "./dist/adapters/nuxt.d.ts"
+      "require": "./dist/adapters/nuxt.cjs"
     },
     "./quasar": {
+      "types": "./dist/adapters/quasar.d.ts",
       "import": "./dist/adapters/quasar.js",
-      "require": "./dist/adapters/quasar.cjs",
-      "types": "./dist/adapters/quasar.d.ts"
+      "require": "./dist/adapters/quasar.cjs"
     },
     "./svelte": {
+      "types": "./dist/hooks/svelte/index.d.ts",
       "import": "./dist/hooks/svelte/index.js",
-      "require": "./dist/hooks/svelte/index.cjs",
-      "types": "./dist/hooks/svelte/index.d.ts"
+      "require": "./dist/hooks/svelte/index.cjs"
+    },
+    "./svelte/adapter": {
+      "types": "./dist/adapters/svelte.d.ts",
+      "import": "./dist/adapters/svelte.js",
+      "require": "./dist/adapters/svelte.cjs"
     }
   },
   "main": "./dist/index.cjs",
@@ -72,7 +77,8 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "vitest"
   },
   "peerDependencies": {
     "next": ">=13",
@@ -96,6 +102,8 @@
   },
   "devDependencies": {
     "tsup": "^8.0.0",
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0",
+    "@vitest/coverage-v8": "^1.0.0"
   }
 }

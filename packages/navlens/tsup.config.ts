@@ -15,6 +15,7 @@ export default defineConfig({
     'hooks/vue/index': 'src/hooks/vue/index.ts',
     'components/vue/index': 'src/components/vue/index.ts',
     'hooks/svelte/index': 'src/hooks/svelte/index.ts',
+    'adapters/svelte': 'src/adapters/svelte.ts',
   },
   format: ['esm', 'cjs'],
   dts: true,

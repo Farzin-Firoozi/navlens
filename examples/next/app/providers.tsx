@@ -1,13 +1,21 @@
 "use client";
 
 import { ReactNavigationTracker, useNextAdapter } from "navlens";
+import { Suspense } from "react";
 
-export function Providers({ children }: { children: React.ReactNode }) {
+function NavigationTracker() {
   const adapter = useNextAdapter();
 
+  return <ReactNavigationTracker adapter={adapter} />;
+}
+
+export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <ReactNavigationTracker adapter={adapter} />
+      <Suspense fallback={null}>
+        <NavigationTracker />
+      </Suspense>
+
       {children}
     </>
   );

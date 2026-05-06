@@ -9,9 +9,9 @@
   },
   "dependencies": {
     "navlens": "workspace:*",
-    "nuxt": "^3.0.0"
+    "nuxt": "^4.4.4"
   },
   "devDependencies": {
-    "typescript": "^5.0.0"
+    "typescript": "^6.0.3"
   }
 }

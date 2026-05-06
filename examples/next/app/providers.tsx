@@ -1,7 +1,6 @@
 "use client";
 
-import { NavigationTracker as ReactNavigationTracker } from "navlens/react/components";
-import { useNextAdapter } from "navlens/next";
+import { NavigationTracker as ReactNavigationTracker, useNextAdapter } from "navlens/next";
 import { Suspense } from "react";
 
 function NavigationTracker() {

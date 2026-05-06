@@ -55,8 +55,7 @@ Add the tracker to your root layout:
 ```tsx
 // app/providers.tsx
 "use client";
-import { NavigationTracker as ReactNavigationTracker } from "navlens/react/components";
-import { useNextAdapter } from "navlens/next";
+import { NavigationTracker as ReactNavigationTracker, useNextAdapter } from "navlens/next";
 import { Suspense } from "react";
 
 function NavigationTracker() {
@@ -124,8 +123,10 @@ export default function ProductDetailPage() {
 ```tsx
 // src/App.tsx
 import { Routes, Route } from "react-router-dom";
-import { NavigationTracker as ReactNavigationTracker } from "navlens/react/components";
-import { useReactRouterAdapter } from "navlens/react-router";
+import {
+  NavigationTracker as ReactNavigationTracker,
+  useReactRouterAdapter,
+} from "navlens/react-router";
 
 export default function App() {
   const adapter = useReactRouterAdapter();
@@ -170,7 +171,7 @@ export default function ProductDetailPage() {
 ```vue
 <!-- src/App.vue -->
 <script setup lang="ts">
-import { useVueNavigationHistory } from "navlens/vue";
+import { useVueNavigationHistory } from "navlens/vue-router";
 useVueNavigationHistory();
 </script>
 
@@ -208,7 +209,7 @@ function handleBack() {
 ```vue
 <!-- layouts/default.vue -->
 <script setup lang="ts">
-import { useVueNavigationHistory } from "navlens/vue";
+import { useVueNavigationHistory } from "navlens/nuxt";
 useVueNavigationHistory();
 </script>
 
@@ -241,7 +242,7 @@ function handleBack() {
 ```ts
 // src/boot/navlens.ts
 import { boot } from "quasar/wrappers";
-import { pushEntry } from "navlens";
+import { pushEntry } from "navlens/quasar";
 
 export default boot(({ router }) => {
   router.afterEach((to) => {

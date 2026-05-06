@@ -1,6 +1,8 @@
 import { Routes, Route } from "react-router-dom";
-import { NavigationTracker as ReactNavigationTracker } from "navlens/react/components";
-import { useReactRouterAdapter } from "navlens/react-router";
+import {
+  NavigationTracker as ReactNavigationTracker,
+  useReactRouterAdapter,
+} from "navlens/react-router";
 import HomePage from "./pages/HomePage";
 import ProductsPage from "./pages/ProductsPage";
 import ProductDetailPage from "./pages/ProductDetailPage";

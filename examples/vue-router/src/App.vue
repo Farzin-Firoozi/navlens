@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useVueNavigationHistory } from 'navlens/vue'
+import { useVueNavigationHistory } from 'navlens/vue-router'
 
 useVueNavigationHistory()
 </script>

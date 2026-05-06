@@ -1,6 +1,6 @@
 {
   "name": "navlens",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Track client-side navigation history with timestamps across React, Vue, Svelte, and more",
   "type": "module",
   "license": "MIT",
@@ -91,7 +91,8 @@
     "dev": "tsup --watch",
     "typecheck": "tsc --noEmit",
     "test": "vitest",
-    "prepublishOnly": "npm run build",
+    "sync:readme": "cp ../../readme.md ./README.md",
+    "prepack": "npm run build && npm run sync:readme",
     "publish": "npm publish"
   },
   "peerDependencies": {

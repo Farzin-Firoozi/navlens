@@ -12,10 +12,11 @@
     "navlens": "workspace:*"
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "^3.0.0",
-    "@sveltejs/kit": "^2.0.0",
-    "svelte": "^4.0.0",
-    "typescript": "^5.0.0",
-    "vite": "^5.0.0"
+    "@sveltejs/adapter-auto": "^7.0.1",
+    "@sveltejs/kit": "^2.59.1",
+    "@sveltejs/vite-plugin-svelte": "^6.2.1",
+    "svelte": "^5.55.5",
+    "typescript": "^6.0.3",
+    "vite": "^7.1.12"
   }
 }

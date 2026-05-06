@@ -21,12 +21,6 @@
   <a href="https://www.npmjs.com/package/navlens">
     <img src="https://img.shields.io/npm/types/navlens?style=flat-square" alt="TypeScript types" />
   </a>
-  <a href="https://bundlephobia.com/package/navlens">
-    <img src="https://img.shields.io/bundlephobia/minzip/navlens?style=flat-square" alt="minzipped size" />
-  </a>
-  <a href="https://codecov.io/gh/farzinfiroozi/navlens">
-    <img src="https://img.shields.io/codecov/c/github/farzinfiroozi/navlens?style=flat-square" alt="test coverage" />
-  </a>
 </p>
 
 <p align="center">
@@ -61,7 +55,8 @@ Add the tracker to your root layout:
 ```tsx
 // app/providers.tsx
 "use client";
-import { ReactNavigationTracker, useNextAdapter } from "navlens";
+import { NavigationTracker as ReactNavigationTracker } from "navlens/react/components";
+import { useNextAdapter } from "navlens/next";
 import { Suspense } from "react";
 
 function NavigationTracker() {
@@ -124,12 +119,13 @@ export default function ProductDetailPage() {
 
 ---
 
-### ![React Router](https://img.shields.io/badge/React_Router-CA4245?logo=reactrouter&logoColor=white&style=flat-square) React Router v6
+### ![React Router](https://img.shields.io/badge/React_Router-CA4245?logo=reactrouter&logoColor=white&style=flat-square) React Router
 
 ```tsx
 // src/App.tsx
 import { Routes, Route } from "react-router-dom";
-import { ReactNavigationTracker, useReactRouterAdapter } from "navlens";
+import { NavigationTracker as ReactNavigationTracker } from "navlens/react/components";
+import { useReactRouterAdapter } from "navlens/react-router";
 
 export default function App() {
   const adapter = useReactRouterAdapter();
@@ -174,7 +170,7 @@ export default function ProductDetailPage() {
 ```vue
 <!-- src/App.vue -->
 <script setup lang="ts">
-import { useVueNavigationHistory } from "navlens";
+import { useVueNavigationHistory } from "navlens/vue";
 useVueNavigationHistory();
 </script>
 
@@ -207,12 +203,12 @@ function handleBack() {
 
 ---
 
-### ![Nuxt](https://img.shields.io/badge/Nuxt-00DC82?logo=nuxtdotjs&logoColor=white&style=flat-square) Nuxt 3
+### ![Nuxt](https://img.shields.io/badge/Nuxt-00DC82?logo=nuxtdotjs&logoColor=white&style=flat-square) Nuxt
 
 ```vue
 <!-- layouts/default.vue -->
 <script setup lang="ts">
-import { useVueNavigationHistory } from "navlens";
+import { useVueNavigationHistory } from "navlens/vue";
 useVueNavigationHistory();
 </script>
 
@@ -270,7 +266,7 @@ boot: ["navlens"];
 <!-- src/routes/+layout.svelte -->
 <script lang="ts">
   import { afterNavigate } from '$app/navigation'
-  import { createNavigationHandler } from 'navlens'
+  import { createNavigationHandler } from 'navlens/svelte'
 
   afterNavigate(createNavigationHandler())
 </script>

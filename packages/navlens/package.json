@@ -1,6 +1,6 @@
 {
   "name": "navlens",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Track client-side navigation history with timestamps across React, Vue, Svelte, and more",
   "type": "module",
   "license": "MIT",

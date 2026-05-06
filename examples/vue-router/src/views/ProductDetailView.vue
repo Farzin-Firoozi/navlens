@@ -1,18 +1,21 @@
 <script setup lang="ts">
-import { useRoute, useRouter } from 'vue-router'
-import { getPreviousPath } from 'navlens'
-import { products } from '../data'
+import { useRoute, useRouter } from "vue-router";
+import { getPreviousPath } from "navlens";
+import { products } from "../data";
 
-const route = useRoute()
-const router = useRouter()
-const product = products.find((p) => p.id === route.params.id)
+const route = useRoute();
+const router = useRouter();
+const product = products.find((p) => p.id === route.params.id);
 
 function handleBack() {
-  const prev = getPreviousPath()
+  const prev = getPreviousPath();
+
+  console.log("prev", prev);
+
   if (prev) {
-    router.back()
+    router.back();
   } else {
-    router.push('/')
+    router.push("/");
   }
 }
 </script>

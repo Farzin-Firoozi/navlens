@@ -3,6 +3,16 @@
   "version": "0.1.0",
   "description": "Track client-side navigation history with timestamps across React, Vue, Svelte, and more",
   "type": "module",
+  "license": "MIT",
+  "author": "Farzin Firoozi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farzin-firoozi/navlens.git"
+  },
+  "homepage": "https://github.com/farzin-firoozi/navlens",
+  "bugs": {
+    "url": "https://github.com/farzin-firoozi/navlens/issues"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -73,7 +83,9 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
@@ -91,14 +103,30 @@
     "@sveltejs/kit": ">=1"
   },
   "peerDependenciesMeta": {
-    "next": { "optional": true },
-    "react": { "optional": true },
-    "react-dom": { "optional": true },
-    "react-router-dom": { "optional": true },
-    "vue": { "optional": true },
-    "vue-router": { "optional": true },
-    "svelte": { "optional": true },
-    "@sveltejs/kit": { "optional": true }
+    "next": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    },
+    "react-router-dom": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    },
+    "vue-router": {
+      "optional": true
+    },
+    "svelte": {
+      "optional": true
+    },
+    "@sveltejs/kit": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "tsup": "^8.0.0",

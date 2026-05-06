@@ -40,12 +40,20 @@ Add the tracker to your root layout:
 ```tsx
 // app/providers.tsx
 "use client";
-import { ReactNavigationTracker } from "navlens";
+import { ReactNavigationTracker, useNextAdapter } from "navlens";
+import { Suspense } from "react";
+
+function NavigationTracker() {
+  const adapter = useNextAdapter();
+  return <ReactNavigationTracker adapter={adapter} />;
+}
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <ReactNavigationTracker adapter="next" />
+      <Suspense fallback={null}>
+        <NavigationTracker />
+      </Suspense>
       {children}
     </>
   );
@@ -100,12 +108,14 @@ export default function ProductDetailPage() {
 ```tsx
 // src/App.tsx
 import { Routes, Route } from "react-router-dom";
-import { ReactNavigationTracker } from "navlens";
+import { ReactNavigationTracker, useReactRouterAdapter } from "navlens";
 
 export default function App() {
+  const adapter = useReactRouterAdapter();
+
   return (
     <>
-      <ReactNavigationTracker adapter="react-router" />
+      <ReactNavigationTracker adapter={adapter} />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/products" element={<ProductsPage />} />

@@ -9,6 +9,27 @@
 </p>
 
 <p align="center">
+  <a href="https://www.npmjs.com/package/navlens">
+    <img src="https://img.shields.io/npm/v/navlens?style=flat-square" alt="npm version" />
+  </a>
+  <a href="https://www.npmjs.com/package/navlens">
+    <img src="https://img.shields.io/npm/dm/navlens?style=flat-square" alt="npm downloads" />
+  </a>
+  <a href="https://www.npmjs.com/package/navlens">
+    <img src="https://img.shields.io/npm/l/navlens?style=flat-square" alt="npm license" />
+  </a>
+  <a href="https://www.npmjs.com/package/navlens">
+    <img src="https://img.shields.io/npm/types/navlens?style=flat-square" alt="TypeScript types" />
+  </a>
+  <a href="https://bundlephobia.com/package/navlens">
+    <img src="https://img.shields.io/bundlephobia/minzip/navlens?style=flat-square" alt="minzipped size" />
+  </a>
+  <a href="https://codecov.io/gh/farzinfiroozi/navlens">
+    <img src="https://img.shields.io/codecov/c/github/farzinfiroozi/navlens?style=flat-square" alt="test coverage" />
+  </a>
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=white&style=flat-square" alt="Next.js" />
   <img src="https://img.shields.io/badge/React_Router-CA4245?logo=reactrouter&logoColor=white&style=flat-square" alt="React Router" />
   <img src="https://img.shields.io/badge/Vue_Router-4FC08D?logo=vuedotjs&logoColor=white&style=flat-square" alt="Vue Router" />
